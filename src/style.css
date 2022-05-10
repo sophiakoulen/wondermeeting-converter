@@ -1,0 +1,28 @@
+*{
+    color: inherit;
+}
+button{
+    cursor: pointer;
+}
+.fr{
+    font-style: italic;
+}
+#data{
+    border: 2px solid black;
+    padding: .5em;
+    line-height: 1.5em;
+}
+#download-button{
+    margin-block: 1em;
+    padding: .5em;
+    font-size: 1.2em;
+    border: 2px solid black;
+    border-radius: 25px;
+    color: #0066cc;
+    transition: all .3s;
+    
+}
+#download-button:hover{
+    transform:scale(1.05);
+    background-color: #e9e9ed;
+}
