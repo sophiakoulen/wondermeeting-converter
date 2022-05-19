@@ -4,11 +4,7 @@ import scrape from "./functions/scrape";
 import createCSV from "./functions/create-csv";
 import populateButton from './functions/populate-button';
 
-//due to CORS issues, requesting to https://www.atleticageneve.com/seltec2.asp isn't possible yet
-//so i copied the html into a local file.
-//this issue has to be fixed on the server side, by enabling script requests with
-//the 'Access-Control-Allow-Origin "*"' header
-const url = `wondermeeting-fake-data.html`;
+const url = `https://www.atleticageneve.com/seltec2.asp`;
 
 fetch(url).then(
     resp => resp.text()
