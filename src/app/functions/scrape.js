@@ -32,18 +32,19 @@ const scrape = (html) => {
             let arr = [];
             $(elt).find('td').each((j, td) => arr.push($(td).text().replace(/\s\s+/g, '')));
             let obj = {
-                lic: arr[0],
-                prenom: arr[1],
-                nom: arr[2],
-                naissance: arr[3],
-                sexe: arr[4],
-                nomrel: arr[5],
-                nat: arr[6],
-                nomclub: arr[7],
-                event: arr[8],
-                cat: arr[9],
-                pb: arr[10],
-                sb: arr[11]
+                id: arr[0],
+                lic: arr[1],
+                prenom: arr[2],
+                nom: arr[3],
+                naissance: arr[4],
+                sexe: arr[5],
+                nomrel: arr[6],
+                nat: arr[7],
+                nomclub: arr[8]||'?',
+                event: arr[9],
+                cat: arr[10],
+                pb: arr[11],
+                sb: arr[12]
             }
             data.push(obj);
         }

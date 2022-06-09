@@ -1,9 +1,11 @@
 const createCSV = (data) => {
     let csvBuffer = '';
-    for (const row of data) {
-        const DELIM = ';';
-        const LINEBREAK = '\r\n';
+    csvBuffer += `id; prenom; nom; naissance; sexe; nat; nomclub; event; cat; pb; sb; sb; infoEv\r\n`;
+    const DELIM = ';';
+    const LINEBREAK = '\r\n';
+    for (const row of data) { 
         const csvRow =
+            row.id + DELIM +
             row.prenom + DELIM +
             row.nom + DELIM +
             row.naissance + DELIM +
@@ -13,7 +15,9 @@ const createCSV = (data) => {
             row.event + DELIM +
             row.cat + DELIM +
             row.pb + DELIM +
-            row.sb + LINEBREAK;
+            row.sb + DELIM +
+            row.sb + DELIM +
+            'B' + LINEBREAK;
         csvBuffer += csvRow;
     }
     //file will be encoded in UTF-8 with BOM, hence the \ufeff character at the beginning of the file

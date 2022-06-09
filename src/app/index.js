@@ -3,6 +3,7 @@ import '../style.css';
 import scrape from "./functions/scrape";
 import createCSV from "./functions/create-csv";
 import populateButton from './functions/populate-button';
+import { attribuerDossards } from './functions/attribuer-dossards';
 
 const url = `https://www.atleticageneve.com/seltec2.asp`;
 
